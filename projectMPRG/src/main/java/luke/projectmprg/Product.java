@@ -1,5 +1,6 @@
 package luke.projectmprg;
 
+//test komenatrza
 public class Product {
 
     private String name;
