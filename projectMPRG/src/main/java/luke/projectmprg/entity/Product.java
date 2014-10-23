@@ -1,6 +1,8 @@
-package luke.projectmprg;
+package luke.projectmprg.entity;
 
-public class Product {
+import luke.projectmprg.Entity;
+
+public class Product extends Entity{
 
     private String name;
     private double price;

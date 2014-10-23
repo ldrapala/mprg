@@ -1,6 +1,8 @@
-package luke.projectmprg;
+package luke.projectmprg.entity;
 
-public class Shop {
+import luke.projectmprg.Entity;
+
+public class Shop extends Entity{
     
     private String name;
 

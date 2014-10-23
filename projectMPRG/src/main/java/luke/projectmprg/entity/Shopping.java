@@ -1,10 +1,11 @@
-package luke.projectmprg;
+package luke.projectmprg.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import luke.projectmprg.Entity;
 
-public class Shopping {
+public class Shopping extends Entity{
     
     private List<Product> products;
     private Date date;
