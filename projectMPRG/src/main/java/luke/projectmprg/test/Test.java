@@ -10,7 +10,7 @@ public class Test {
     public static void main(String[] args) {
 
         IRepositoryCatalog catalog = new DummyRepositoryCatalog();
-        List<Product> admins = catalog.getProducts().withCategory("alkohol");
+        List<Product> products = catalog.getProducts().withCategory("alkohol");
 
     }
 
