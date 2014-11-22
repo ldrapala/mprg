@@ -6,19 +6,19 @@ import luke.projectmprg.Entity;
 
 public class Category extends Entity {
     
-    private String category;
+    private String name;
     private List<Product> products;
 
     public Category() {
        this.products = new ArrayList<>();
     }
     
-    public String getCategory() {
-        return category;
+    public String getName() {
+        return name;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Product> getProducts() {

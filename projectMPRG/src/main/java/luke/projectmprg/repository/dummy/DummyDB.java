@@ -1,4 +1,4 @@
-package luke.projectmprg.repository;
+package luke.projectmprg.repository.dummy;
 
 import java.util.ArrayList;
 import java.util.List;

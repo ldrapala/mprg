@@ -1,4 +1,4 @@
-package luke.projectmprg.repository;
+package luke.projectmprg.repository.dummy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class DummyProductRepository implements IProductRepository {
     @Override
     public List<Product> withCategory(String categoryName) {
         for (Category el : db.categories) {
-            if (el.getCategory().equals(categoryName)) {
+            if (el.getName().equals(categoryName)) {
                 return el.getProducts();
             }
         }

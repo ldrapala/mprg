@@ -1,4 +1,4 @@
-package luke.projectmprg.repository;
+package luke.projectmprg.repository.dummy;
 
 import luke.projectmprg.IProductRepository;
 import luke.projectmprg.IRepositoryCatalog;
