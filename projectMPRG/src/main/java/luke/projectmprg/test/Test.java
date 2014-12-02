@@ -3,12 +3,17 @@ package luke.projectmprg.test;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 import luke.projectmprg.IRepository;
 import luke.projectmprg.entity.Category;
 import luke.projectmprg.entity.Product;
 import luke.projectmprg.entity.Shop;
 import luke.projectmprg.entity.Shopping;
+import luke.projectmprg.entity.builder.CategoryBuilder;
+import luke.projectmprg.entity.builder.ProductBuilder;
+import luke.projectmprg.entity.builder.ShopBuilder;
+import luke.projectmprg.entity.builder.ShoppingBuilder;
 import luke.projectmprg.repository.CategoryRepository;
 import luke.projectmprg.repository.ProductRepository;
 import luke.projectmprg.repository.ShopRepository;
@@ -39,10 +44,14 @@ public class Test {
         try {
             Connection connection = DriverManager.getConnection(url, "postgres", "luke");
 
-            IRepository<Shopping> shoppingRepo = new ShoppingRepository(connection);
-            IRepository<Shop> shopRepo = new ShopRepository(connection);
-            IRepository<Category> categoryRepo = new CategoryRepository(connection);
-            IRepository<Product> productRepo = new ProductRepository(connection);
+            IRepository<Shopping> shoppingRepo = 
+                    new ShoppingRepository(connection, new ShoppingBuilder());
+            IRepository<Shop> shopRepo = 
+                    new ShopRepository(connection, new ShopBuilder());
+            IRepository<Category> categoryRepo = 
+                    new CategoryRepository(connection, new CategoryBuilder());
+            IRepository<Product> productRepo = 
+                    new ProductRepository(connection, new ProductBuilder());
 
             shoppingRepo.save(shopping);
             shopRepo.save(shop);
@@ -90,7 +99,7 @@ public class Test {
             printer.printAllElementsFromCategory(categoryRepo.getAll());
             System.out.println("---");
             printer.printAllElementsFromProduct(productRepo.getAll());
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         System.out.println("koniec");

@@ -2,7 +2,6 @@ package luke.projectmprg.entity;
 
 import java.util.ArrayList;
 import java.util.List;
-import luke.projectmprg.Entity;
 
 public class Shop extends Entity{
     

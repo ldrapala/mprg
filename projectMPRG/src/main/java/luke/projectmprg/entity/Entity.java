@@ -1,4 +1,4 @@
-package luke.projectmprg;
+package luke.projectmprg.entity;
 
 public abstract class Entity {
 

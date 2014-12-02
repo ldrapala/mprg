@@ -3,7 +3,6 @@ package luke.projectmprg.entity;
 import java.util.ArrayList;
 import java.sql.Date;
 import java.util.List;
-import luke.projectmprg.Entity;
 
 public class Shopping extends Entity{
     

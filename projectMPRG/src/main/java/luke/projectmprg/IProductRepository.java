@@ -6,11 +6,6 @@ import luke.projectmprg.entity.Product;
 
 public interface IProductRepository extends IRepository<Product> {
 
-    /*
-     *
-     * Metoda wyciąga produkty po kategorii
-     *
-     */
     public List<Product> withCategory(Category category);
 
     public List<Product> withCategory(String categoryName);
