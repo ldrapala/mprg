@@ -7,9 +7,11 @@ public class Shop extends Entity{
     
     private String name;
     private List<Product> products;
+    private List<Shopping> shopping;
 
     public Shop() {
         this.products = new ArrayList<>();
+        this.shopping = new ArrayList<>();
     }
     
     public String getName() {
@@ -26,6 +28,14 @@ public class Shop extends Entity{
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public List<Shopping> getShopping() {
+        return shopping;
+    }
+
+    public void setShopping(List<Shopping> shopping) {
+        this.shopping = shopping;
     }
     
 }

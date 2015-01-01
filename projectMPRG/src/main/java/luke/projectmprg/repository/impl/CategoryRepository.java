@@ -1,15 +1,16 @@
-package luke.projectmprg.repository;
+package luke.projectmprg.repository.impl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import luke.projectmprg.Repository;
 import luke.projectmprg.entity.Category;
 import luke.projectmprg.entity.builder.IEntityBuilder;
+import luke.projectmprg.unitofwork.IUnitOfWork;
 
 public class CategoryRepository extends Repository<Category> {
 
-    public CategoryRepository(Connection connection, IEntityBuilder <Category> builder) {
-        super(connection, builder);
+    public CategoryRepository(Connection connection, IEntityBuilder <Category> builder, 
+            IUnitOfWork unitOfWork) {
+        super(connection, builder, unitOfWork);
     }
 
     @Override

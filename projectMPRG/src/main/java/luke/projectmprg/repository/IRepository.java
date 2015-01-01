@@ -1,4 +1,4 @@
-package luke.projectmprg;
+package luke.projectmprg.repository;
 
 import java.util.List;
 

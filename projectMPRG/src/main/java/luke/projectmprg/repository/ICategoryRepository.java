@@ -1,4 +1,4 @@
-package luke.projectmprg;
+package luke.projectmprg.repository;
 
 import luke.projectmprg.entity.Category;
 import luke.projectmprg.entity.Product;

@@ -1,12 +1,20 @@
 package luke.projectmprg.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product extends Entity{
 
     private String name;
     private double price;
     private double weight;
     private Category category;
+    private List <Shop> shops;
 
+    public Product() {
+        this.shops = new ArrayList<>();
+    }
+    
     public String getName() {
         return name;
     }
@@ -37,6 +45,14 @@ public class Product extends Entity{
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public List<Shop> getShops() {
+        return shops;
+    }
+
+    public void setShops(List<Shop> shops) {
+        this.shops = shops;
     }
     
 }

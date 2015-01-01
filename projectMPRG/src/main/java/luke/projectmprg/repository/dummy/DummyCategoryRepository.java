@@ -1,7 +1,7 @@
 package luke.projectmprg.repository.dummy;
 
 import java.util.List;
-import luke.projectmprg.ICategoryRepository;
+import luke.projectmprg.repository.ICategoryRepository;
 import luke.projectmprg.entity.Category;
 import luke.projectmprg.entity.Product;
 

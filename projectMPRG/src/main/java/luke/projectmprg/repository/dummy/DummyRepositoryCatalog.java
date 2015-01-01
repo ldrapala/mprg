@@ -1,9 +1,10 @@
 package luke.projectmprg.repository.dummy;
 
-import luke.projectmprg.ICategoryRepository;
-import luke.projectmprg.IProductRepository;
+import luke.projectmprg.repository.ICategoryRepository;
+import luke.projectmprg.repository.IProductRepository;
 import luke.projectmprg.IRepositoryCatalog;
-import luke.projectmprg.IShoppingRepository;
+import luke.projectmprg.repository.IShopRepository;
+import luke.projectmprg.repository.IShoppingRepository;
 
 public class DummyRepositoryCatalog implements IRepositoryCatalog {
     
@@ -21,7 +22,12 @@ public class DummyRepositoryCatalog implements IRepositoryCatalog {
 
     @Override
     public IShoppingRepository getShopping() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new DummyShoppingRepository(db);
+    }
+
+    @Override
+    public IShopRepository getShops() {
+        return new DummyShopRepository(db);
     }
 
 }

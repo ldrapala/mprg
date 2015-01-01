@@ -1,15 +1,18 @@
-package luke.projectmprg.repository;
+package luke.projectmprg.repository.impl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import luke.projectmprg.Repository;
+import java.util.List;
+import luke.projectmprg.entity.Product;
 import luke.projectmprg.entity.Shop;
 import luke.projectmprg.entity.builder.IEntityBuilder;
+import luke.projectmprg.unitofwork.IUnitOfWork;
 
 public class ShopRepository extends Repository<Shop> {
 
-    public ShopRepository(Connection connection, IEntityBuilder<Shop> builder) {
-        super(connection, builder);
+    public ShopRepository(Connection connection, IEntityBuilder<Shop> builder,
+            IUnitOfWork unitOfWork) {
+        super(connection, builder, unitOfWork);
     }
 
     @Override

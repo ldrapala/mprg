@@ -1,9 +1,16 @@
 package luke.projectmprg;
 
+import luke.projectmprg.repository.IRepository;
+import luke.projectmprg.entity.Category;
+import luke.projectmprg.entity.Product;
+import luke.projectmprg.entity.Shop;
+import luke.projectmprg.entity.Shopping;
+
 public interface IRepositoryCatalog {
     
-    public IProductRepository getProducts();
-    public ICategoryRepository getCategories();
-    public IShoppingRepository getShopping();
+    IRepository<Product> getProducts();
+    IRepository<Category> getCategories();
+    IRepository<Shopping> getShopping();
+    IRepository<Shop> getShops();
     
 }
